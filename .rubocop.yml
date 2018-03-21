@@ -1,0 +1,41 @@
+inherit_gem:
+  onkcop:
+    - "config/rubocop.yml"
+    # uncomment if use rails cops
+    - "config/rails.yml"
+    # uncomment if use rspec cops
+    - "config/rspec.yml"
+
+Rails/SaveBang:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.4
+  # uncomment if use rails cops
+  TargetRailsVersion: 5.1
+  Exclude:
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "bin/*"
+    - "Guardfile"
+    - "db/migrate/**/*"
+    - "lib/yml_to_env.rb"
+Metrics/BlockLength:
+  Exclude:
+    - "config/**/*"
+    - "spec/**/*"
+    - "lib/tasks/**/*"
+Metrics/MethodLength:
+  Exclude:
+    - "lib/tasks/**/*"
+RSpec/AnyInstance:
+  Exclude:
+    - "spec/requests/**/*"
+RSpec/MultipleExpectations:
+  Exclude:
+    - "spec/requests/**/*"
+Metrics/ModuleLength:
+  Exclude:
+    - "app/decorators/**/*"
+    - "spec/requests/**/*"
+    - "app/helpers/**/*"
