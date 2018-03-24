@@ -1,4 +1,4 @@
-class AudiosController < ApplicationController
+class FilesController < ApplicationController
   def index
   end
 

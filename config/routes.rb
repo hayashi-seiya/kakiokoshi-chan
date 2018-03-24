@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root "audios#index"
+  root "files#index"
 
-  post "/audios/upload", to: "audios#upload"
+  post "/files/upload", to: "files#upload"
 end
