@@ -3,4 +3,4 @@ div
   / multipart: true にしないと、 ファイル名しか送信できない
   = form_with url: files_upload_path, method: :post, local: true, multipart: true do
     = file_field :fileupload, :file
-    = submit_tag "アップロード", class: "btn btn-outline-primary"
+    = submit_tag "アップロード"
