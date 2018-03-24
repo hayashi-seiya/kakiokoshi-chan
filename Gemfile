@@ -69,3 +69,6 @@ gem "seed-fu"
 # Use slim instead of erb
 gem "html2slim"
 gem "slim-rails"
+
+# Use GoogleSpeechApi
+gem "google-cloud-speech"
