@@ -51,4 +51,4 @@ test:
 #
 production:
   <<: *default
-  database: kakiokoshi-chan_test
+  database: kakiokoshi-chan_production
