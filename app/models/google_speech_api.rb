@@ -3,14 +3,14 @@ class GoogleSpeechAPI
   include Singleton
 
   PROJECT_ID = "kakiokoshi-chan".freeze
+  AUDIO_DIR  = Rails.root.join("tmp", "audio")
 
   def initialize
     @speech = Google::Cloud::Speech.new(project: PROJECT_ID)
   end
 
   def transcript
-    audio_dir = Rails.root.join("tmp", "audio")
-    audio_file_name = "#{audio_dir}/0101001.wav"
+    audio_file_name = "#{AUDIO_DIR}/0101001.wav"
     audio = @speech.audio(audio_file_name,
                           encoding: :linear16,
                           sample_rate: 44100,
